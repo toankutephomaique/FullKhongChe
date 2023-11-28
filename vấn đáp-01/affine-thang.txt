@@ -1,0 +1,13 @@
+Đoạn code trên là một chương trình mã hóa và giải mã Affine. Affine là một phép mã hóa đơn giản trong mật mã học, nó sử dụng hai hệ số a và b để thay đổi giá trị của các ký tự trong chuỗi ban đầu.
+
+
+Hàm modInverse được sử dụng để tìm nghịch đảo modulo của một số a trong một môđun m. Nghĩa là tìm số x sao cho (a * x) % m = 1.
+
+
+Hàm affineEncrypt được sử dụng để mã hóa chuỗi message bằng phép mã hóa Affine. Với mỗi ký tự trong chuỗi message, nếu là một ký tự chữ cái, nó sẽ được chuyển đổi thành một ký tự mới bằng cách áp dụng công thức: shiftedChar = ((a * shiftedChar) + b) % 26 + 'A'. Nếu không phải ký tự chữ cái, ký tự sẽ được giữ nguyên.
+
+
+Hàm affineDecrypt được sử dụng để giải mã chuỗi encryptedMessage bằng phép giải mã Affine. Tương tự như hàm affineEncrypt, nhưng sử dụng nghịch đảo modulo của a để tính ngược lại ký tự gốc.
+
+
+Trong hàm main, người dùng sẽ nhập vào một chuỗi cần mã hóa hoặc giải mã, lựa chọn mã hóa hoặc giải mã, và hai hệ số a và b. Sau đó, chương trình sẽ thực hiện mã hóa hoặc giải mã theo lựa chọn của người dùng và in ra kết quả tương ứng.

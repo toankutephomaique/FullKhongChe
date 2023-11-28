@@ -1,0 +1,68 @@
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+
+// Hàm mã hóa Vigenere
+string vigenereEncrypt(string message, string key) {
+string encryptedMessage = "";
+int keyLength = key.length();
+for (int i = 0, j = 0; i < message.length(); i++) {
+if (isalpha(message[i])) {
+char shiftedChar = (toupper(message[i]) - 'A' + toupper(key[j]) - 'A') % 26 + 'A';
+encryptedMessage += shiftedChar;
+j = (j + 1) % keyLength;
+} else {
+encryptedMessage += message[i];
+}
+}
+return encryptedMessage;
+}
+
+
+// Hàm giải mã Vigenere
+string vigenereDecrypt(string encryptedMessage, string key) {
+string decryptedMessage = "";
+int keyLength = key.length();
+for (int i = 0, j = 0; i < encryptedMessage.length(); i++) {
+if (isalpha(encryptedMessage[i])) {
+char shiftedChar = (toupper(encryptedMessage[i]) - toupper(key[j]) + 26) % 26 + 'A';
+decryptedMessage += shiftedChar;
+j = (j + 1) % keyLength;
+} else {
+decryptedMessage += encryptedMessage[i];
+}
+}
+return decryptedMessage;
+}
+
+
+int main() {
+string message, key;
+int choice;
+cout << "Nhap chuoi can ma hoa hoac giai ma: ";
+getline(cin, message);
+
+cout << "Nhap lua chon (1: Ma hoa, 2: Giai ma): ";
+cin >> choice;
+
+cout << "Nhap khoa: ";
+cin.ignore();
+getline(cin, key);
+
+if (choice == 1) {
+    string encryptedMessage = vigenereEncrypt(message, key);
+    cout << "Chuoi da ma hoa: " << encryptedMessage << endl;
+} else if (choice == 2) {
+    string decryptedMessage = vigenereDecrypt(message, key);
+    cout << "Chuoi da giai ma: " << decryptedMessage << endl;
+} else {
+    cout << "Lua chon khong hop le!" << endl;
+}
+
+return 0;
+
+}
+

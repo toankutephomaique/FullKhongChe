@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Hàm mã hóa Caesar
+string caesarEncrypt(string message, int shift) {
+    string encryptedMessage = "";
+    for (int i = 0; i < message.length(); i++) {
+        if (isalpha(message[i])) {
+            char shiftedChar = (toupper(message[i]) - 'A' + shift) % 26 + 'A';
+            encryptedMessage += shiftedChar;
+        } else {
+            encryptedMessage += message[i];
+        }
+    }
+    return encryptedMessage;
+}
+
+// Hàm giải mã Caesar
+string caesarDecrypt(string encryptedMessage, int shift) {
+    string decryptedMessage = "";
+    for (int i = 0; i < encryptedMessage.length(); i++) {
+        if (isalpha(encryptedMessage[i])) {
+            char shiftedChar = (toupper(encryptedMessage[i]) - 'A' - shift + 26) % 26 + 'A';
+            decryptedMessage += shiftedChar;
+        } else {
+            decryptedMessage += encryptedMessage[i];
+        }
+    }
+    return decryptedMessage;
+}
+
+int main() {
+    string message;
+    int choice, shift;
+
+    cout << "Nhap chuoi can ma hoa hoac giai ma: ";
+    getline(cin, message);
+
+    cout << "Nhap lua chon (1: Ma hoa, 2: Giai ma): ";
+    cin >> choice;
+
+    cout << "Nhap so buoc dich chuyen: ";
+    cin >> shift;
+
+    if (choice == 1) {
+        string encryptedMessage = caesarEncrypt(message, shift);
+        cout << "Chuoi da ma hoa: " << encryptedMessage << endl;
+    } else if (choice == 2) {
+        string decryptedMessage = caesarDecrypt(message, shift);
+        cout << "Chuoi da giai ma: " << decryptedMessage << endl;
+    } else {
+        cout << "Lua chon khong hop le!" << endl;
+    }
+
+    return 0;
+}

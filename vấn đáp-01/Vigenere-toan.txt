@@ -1,0 +1,54 @@
+Đoạn code trên là một chương trình đơn giản để mã hóa và giải mã chuỗi sử dụng phương pháp Vigenere.
+
+
+
+Đầu tiên, các thư viện iostream và string được đưa vào để sử dụng các hàm và lớp liên quan đến đầu vào/đầu ra và chuỗi.
+
+Tiếp theo, sử dụng namespace std để không phải gọi tên đầy đủ của các thành phần trong thư viện std.
+
+Định nghĩa hàm mã hóa Vigenere với hai tham số là message (chuỗi cần mã hóa) và key (khoá mã hóa).
+
+Tạo một chuỗi encryptedMessage để lưu trữ kết quả mã hóa.
+
+Lặp qua từng ký tự trong chuỗi message:
+
+Nếu ký tự là chữ cái, thực hiện mã hóa Vigenere bằng cách tính toán vị trí của ký tự trong bảng chữ cái, sau đó cộng với vị trí của ký tự tương ứng trong khoá key. Kết quả được chuyển đổi trở lại ký tự chữ cái và được thêm vào chuỗi encryptedMessage. Biến j được sử dụng để duy trì chỉ số của ký tự trong khoá key.
+
+Nếu ký tự không phải chữ cái, ký tự đó được thêm vào chuỗi encryptedMessage mà không thay đổi.
+
+
+
+Trả về chuỗi encryptedMessage là kết quả mã hóa.
+
+Tương tự, hàm giải mã Vigenere với hai tham số là encryptedMessage (chuỗi đã mã hóa) và key (khoá giải mã).
+
+Tạo một chuỗi decryptedMessage để lưu trữ kết quả giải mã.
+
+Lặp qua từng ký tự trong chuỗi encryptedMessage:
+
+Nếu ký tự là chữ cái, thực hiện giải mã Vigenere bằng cách tính toán vị trí của ký tự trong bảng chữ cái, sau đó trừ đi vị trí của ký tự tương ứng trong khoá key và thêm 26 để đảm bảo kết quả luôn dương. Kết quả được chuyển đổi trở lại ký tự chữ cái và được thêm vào chuỗi decryptedMessage. Biến j được sử dụng để duy trì chỉ số của ký tự trong khoá key.
+
+Nếu ký tự không phải chữ cái, ký tự đó được thêm vào chuỗi decryptedMessage mà không thay đổi.
+
+
+
+Trả về chuỗi decryptedMessage là kết quả giải mã.
+
+Trong hàm main:
+
+Nhập chuỗi cần mã hóa hoặc giải mã từ người dùng.
+
+Nhập lựa chọn (1: Mã hóa, 2: Giải mã) từ người dùng.
+
+Nhập khoá từ người dùng.
+
+Nếu lựa chọn là 1, gọi hàm vigenereEncrypt để mã hóa chuỗi và in ra kết quả.
+
+Nếu lựa chọn là 2, gọi hàm vigenereDecrypt để giải mã chuỗi và in ra kết quả.
+
+Nếu lựa chọn không hợp lệ, in ra thông báo lựa chọn không hợp lệ.
+
+
+
+Trả về 0 để kết thúc chương trình.
+

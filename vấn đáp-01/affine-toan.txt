@@ -1,0 +1,35 @@
+Đoạn code trên là một chương trình để mã hóa và giải mã chuỗi văn bản bằng phương pháp Affine. Phương pháp Affine sử dụng một hàm tuyến tính để chuyển đổi các ký tự trong chuỗi. Dưới đây là giải thích từng đoạn code:
+
+
+Đoạn code đầu tiên khai báo các thư viện cần thiết và sử dụng namespace std để không cần gọi tên không gian tên std::
+
+
+Hàm modInverse(a, m): Hàm này tính nghịch đảo modulo của số a với modulo m. Hàm này sử dụng vòng lặp để kiểm tra từng giá trị x từ 1 đến m, nếu (a * x) % m = 1 thì trả về giá trị x. Nếu không tìm thấy giá trị x thỏa mãn, hàm trả về -1.
+
+
+Hàm affineEncrypt(message, a, b): Hàm này thực hiện mã hóa chuỗi message bằng phương pháp Affine với hai hệ số a và b. Hàm này duyệt qua từng ký tự trong chuỗi message, nếu là ký tự chữ cái, thực hiện các bước sau:
+
+Chuyển đổi ký tự thành chữ hoa bằng hàm toupper.
+Chuyển đổi ký tự thành số nguyên theo mã ASCII và trừ đi giá trị của ký tự 'A' để có được giá trị trong khoảng từ 0 đến 25.
+Thực hiện phép tính mã hóa Affine ((a * shiftedChar) + b) % 26.
+Chuyển đổi kết quả mã hóa thành ký tự chữ cái theo mã ASCII và cộng thêm giá trị của ký tự 'A'.
+Thêm ký tự đã mã hóa vào chuỗi encryptedMessage.
+Nếu ký tự không phải là chữ cái, thêm ký tự đó vào chuỗi encryptedMessage mà không thay đổi.
+
+
+
+Hàm affineDecrypt(encryptedMessage, a, b): Hàm này thực hiện giải mã chuỗi encryptedMessage đã được mã hóa bằng phương pháp Affine với hai hệ số a và b. Hàm này tương tự như hàm affineEncrypt, nhưng thay vì thực hiện phép tính mã hóa, nó thực hiện phép tính giải mã Affine ((aInverse * (shiftedChar - b + 26)) % 26).
+
+
+Hàm main(): Hàm chính của chương trình, thực hiện các bước sau:
+
+Nhập chuỗi cần mã hóa hoặc giải mã từ người dùng.
+Nhập lựa chọn (1: Mã hóa, 2: Giải mã) từ người dùng.
+Nhập hai hệ số a và b từ người dùng.
+Nếu lựa chọn là 1, gọi hàm affineEncrypt để mã hóa chuỗi và in ra chuỗi đã mã hóa.
+Nếu lựa chọn là 2, gọi hàm affineDecrypt để giải mã chuỗi và in ra chuỗi đã giải mã.
+Nếu lựa chọn không hợp lệ, in ra thông báo lỗi.
+
+
+
+Chương trình này sử dụng các hàm tuyến tính và phép tính modulo để thực hiện mã hóa và giải mã Affine trên chuỗi văn bản.

@@ -1,0 +1,75 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Hàm tìm nghịch đảo modulo
+int modInverse(int a, int m) {
+    a = a % m;
+    for (int x = 1; x < m; x++) {
+        if ((a * x) % m == 1) {
+            return x;
+        }
+    }
+    return -1;
+}
+
+// Hàm mã hóa Affine
+string affineEncrypt(string message, int a, int b) {
+    string encryptedMessage = "";
+    for (int i = 0; i < message.length(); i++) {
+        if (isalpha(message[i])) {
+            char shiftedChar = (toupper(message[i]) - 'A');
+            shiftedChar = ((a * shiftedChar) + b) % 26 + 'A';
+            encryptedMessage += shiftedChar;
+        } else {
+            encryptedMessage += message[i];
+        }
+    }
+    return encryptedMessage;
+}
+
+// Hàm giải mã Affine
+string affineDecrypt(string encryptedMessage, int a, int b) {
+    string decryptedMessage = "";
+    int aInverse = modInverse(a, 26);
+    for (int i = 0; i < encryptedMessage.length(); i++) {
+        if (isalpha(encryptedMessage[i])) {
+            char shiftedChar = (toupper(encryptedMessage[i]) - 'A');
+            shiftedChar = (aInverse * (shiftedChar - b + 26)) % 26 + 'A';
+            decryptedMessage += shiftedChar;
+        } else {
+            decryptedMessage += encryptedMessage[i];
+        }
+    }
+    return decryptedMessage;
+}
+
+int main() {
+    string message;
+    int choice, a, b;
+
+    cout << "Nhap chuoi can ma hoa hoac giai ma: ";
+    getline(cin, message);
+
+    cout << "Nhap lua chon (1: Ma hoa, 2: Giai ma): ";
+    cin >> choice;
+
+    cout << "Nhap he so a: ";
+    cin >> a;
+
+    cout << "Nhap he so b: ";
+    cin >> b;
+
+    if (choice == 1) {
+        string encryptedMessage = affineEncrypt(message, a, b);
+        cout << "Chuoi da ma hoa: " << encryptedMessage << endl;
+    } else if (choice == 2) {
+        string decryptedMessage = affineDecrypt(message, a, b);
+        cout << "Chuoi da giai ma: " << decryptedMessage << endl;
+    } else {
+        cout << "Lua chon khong hop le!" << endl;
+    }
+
+    return 0;
+}

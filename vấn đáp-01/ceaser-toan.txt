@@ -1,0 +1,74 @@
+Đoạn code trên là một chương trình đơn giản để mã hóa và giải mã Caesar cipher bằng ngôn ngữ C++. Dưới đây là giải thích ngắn gọn từng đoạn code:
+
+Import thư viện và sử dụng namespace:
+
+#include <iostream>
+#include <string>
+using namespace std;
+Đoạn code trên import các thư viện iostream và string để sử dụng các chức năng của chúng. Dòng "using namespace std" cho phép sử dụng các thành phần trong namespace std mà không cần khai báo đầy đủ.
+
+Hàm mã hóa Caesar:
+
+string caesarEncrypt(string message, int shift) {
+string encryptedMessage = "";
+for (int i = 0; i < message.length(); i++) {
+if (isalpha(message[i])) {
+char shiftedChar = (toupper(message[i]) - 'A' + shift) % 26 + 'A';
+encryptedMessage += shiftedChar;
+} else {
+encryptedMessage += message[i];
+}
+}
+return encryptedMessage;
+}
+Hàm caesarEncrypt nhận vào một chuỗi message cần được mã hóa và một số nguyên shift đại diện cho số bước dịch chuyển. Hàm này duyệt qua từng ký tự trong chuỗi message. Nếu ký tự là một chữ cái, nó sẽ được dịch chuyển shift bước theo bảng chữ cái tiếng Anh. Nếu không, ký tự sẽ được giữ nguyên. Cuối cùng, hàm trả về chuỗi encryptedMessage đã được mã hóa.
+
+Hàm giải mã Caesar:
+
+string caesarDecrypt(string encryptedMessage, int shift) {
+string decryptedMessage = "";
+for (int i = 0; i < encryptedMessage.length(); i++) {
+if (isalpha(encryptedMessage[i])) {
+char shiftedChar = (toupper(encryptedMessage[i]) - 'A' - shift + 26) % 26 + 'A';
+decryptedMessage += shiftedChar;
+} else {
+decryptedMessage += encryptedMessage[i];
+}
+}
+return decryptedMessage;
+}
+Hàm caesarDecrypt tương tự như caesarEncrypt, nhưng nó được sử dụng để giải mã chuỗi encryptedMessage. Công thức dịch chuyển trong hàm caesarDecrypt đảm bảo rằng khi giải mã, chúng ta quay lại vị trí ban đầu của ký tự.
+
+Hàm main:
+
+int main() {
+int choice;
+string message;
+int shift;
+Copycout << "Nhap lua chon (1: Ma hoa, 2: Giai ma): ";
+cin >> choice;
+cin.ignore(); // Xóa bộ nhớ đệm
+
+cout << "Nhap chuoi can ma hoa hoac giai ma: ";
+getline(cin, message);
+
+cout << "Nhap so buoc dich chuyen: ";
+cin >> shift;
+
+if (choice == 1) {
+    string encryptedMessage = caesarEncrypt(message, shift);
+    cout << "Chuoi da ma hoa: " << encryptedMessage << endl;
+} else if (choice == 2) {
+    string decryptedMessage = caesarDecrypt(message, shift);
+    cout << "Chuoi da giai ma: " << decryptedMessage << endl;
+} else {
+    cout << "Lua chon khong hop le!" << endl;
+}
+
+return 0;
+
+}
+Trong hàm main, chương trình yêu cầu người dùng nhập lựa chọn (1: mã hóa, 2: giải mã), chuỗi cần mã hóa hoặc giải mã và số bước dịch chuyển. Hàm cin dùng để nhận giá trị từ người dùng. Hàm cin.ignore() được sử dụng để xóa bộ nhớ đệm sau khi nhập số.
+Sau đó, chương trình sử dụng hàm getline để nhận chuỗi từ người dùng, bao gồm cả dấu cách.
+Cuối cùng, chương trình sử dụng các hàm caesarEncrypt và caesarDecrypt để thực hiện mã hóa hoặc giải mã và in kết quả ra màn hình. Nếu người dùng nhập lựa chọn không hợp lệ, chương trình thông báo lỗi.
+Cuối cùng, chương trình trả về giá trị 0 để kết thúc.
