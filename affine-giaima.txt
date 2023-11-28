@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+
+
+int modInverse(int a, int m) {
+a = a % m;
+for (int x = 1; x < m; x++) {
+if ((a * x) % m == 1) {
+return x;
+}
+}
+return -1;
+}
+
+
+std::string decryptAffine(std::string ciphertext, int a, int b) {
+// Tìm phần nghịch đảo của a trong modulo 26
+int aInverse = modInverse(a, 26);
+if (aInverse == -1) {
+return "Không thể giải mã. Vui lòng chọn giá trị a khác.";
+}
+std::string plaintext = "";
+int length = ciphertext.length();
+
+for (int i = 0; i < length; i++) {
+    char character = ciphertext[i];
+
+    // Kiểm tra xem ký tự có phải là chữ cái không
+    if (isalpha(character)) {
+        // Xác định vị trí của ký tự trong bảng chữ cái
+        char base = isupper(character) ? 'A' : 'a';
+        int position = character - base;
+
+        // Áp dụng phép giải mã affine
+        int decryptedPosition = (aInverse * (position - b + 26)) % 26;
+
+        // Chuyển đổi vị trí đã giải mã thành ký tự
+        char decryptedChar = base + decryptedPosition;
+
+        // Thêm ký tự đã giải mã vào chuỗi plaintext
+        plaintext += decryptedChar;
+    } else {
+        // Không giải mã những ký tự không phải là chữ cái
+        plaintext += character;
+    }
+}
+
+return plaintext;
+
+}
+
+
+int main() {
+std::string ciphertext;
+int a, b;
+
+// Nhập bản mã từ bàn phím
+std::cout << "Enter ciphertext: ";
+std::getline(std::cin, ciphertext);
+
+// Nhập các hệ số a và b từ bàn phím
+std::cout << "Enter coefficient a: ";
+std::cin >> a;
+std::cout << "Enter coefficient b: ";
+std::cin >> b;
+
+// Giải mã và in ra bản rõ
+std::string decryptedText = decryptAffine(ciphertext, a, b);
+std::cout << "Decrypted text: " << decryptedText << std::endl;
+
+return 0;
+
+}

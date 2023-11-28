@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+
+std::string encryptCaesar(std::string plaintext, int shift) {
+    std::string ciphertext = "";
+    int length = plaintext.length();
+
+    for (int i = 0; i < length; i++) {
+        char character = plaintext[i];
+
+        // Kiểm tra xem ký tự có phải là chữ cái không
+        if (isalpha(character)) {
+            // Xác định vị trí của ký tự trong bảng chữ cái
+            char base = isupper(character) ? 'A' : 'a';
+            int position = character - base;
+
+            // Áp dụng phép dịch chuyển (shift) và xoay vòng trong bảng chữ cái
+            int shiftedPosition = (position + shift) % 26;
+
+            // Chuyển đổi vị trí đã dịch chuyển thành ký tự
+            char shiftedChar = base + shiftedPosition;
+
+            // Thêm ký tự đã mã hóa vào chuỗi ciphertext
+            ciphertext += shiftedChar;
+        } else {
+            // Không mã hóa những ký tự không phải là chữ cái
+            ciphertext += character;
+        }
+    }
+
+    return ciphertext;
+}
+
+std::string decryptCaesar(std::string ciphertext, int shift) {
+    // Để giải mã, chúng ta sử dụng phép dịch chuyển ngược lại với phép mã hóa
+    int reverseShift = 26 - (shift % 26);
+    return encryptCaesar(ciphertext, reverseShift);
+}
+
+int main() {
+    std::string plaintext;
+    int shift;
+
+    // Nhập bản rõ từ bàn phím
+    std::cout << "Enter plaintext: ";
+    std::getline(std::cin, plaintext);
+
+    // Nhập số lượng dịch chuyển (shift) từ bàn phím
+    std::cout << "Enter shift: ";
+    std::cin >> shift;
+
+    // Mã hóa và in ra bản mã
+    std::string ciphertext = encryptCaesar(plaintext, shift);
+    std::cout << "Ciphertext: " << ciphertext << std::endl;
+
+    // Giải mã và in ra bản rõ
+    //std::string decryptedText = decryptCaesar(ciphertext, shift);
+    //std::cout << "Decrypted text: " << decryptedText << std::endl;
+
+    return 0;
+}

@@ -1,0 +1,92 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+std::vector<std::vector<int>> multiplyMatrix(const std::vector<std::vector<int>>& matrix1, const std::vector<std::vector<int>>& matrix2) {
+    int m = matrix1.size();
+    int n = matrix2[0].size();
+    int p = matrix2.size();
+
+    std::vector<std::vector<int>> result(m, std::vector<int>(n, 0));
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < p; k++) {
+                result[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+            result[i][j] %= 26; // Modulo 26
+        }
+    }
+
+    return result;
+}
+
+std::string hillCipherEncrypt(const std::string& plaintext, const std::vector<std::vector<int>>& keyMatrix) {
+    int m = keyMatrix.size();
+
+    // Convert plaintext to uppercase and remove spaces
+    std::string modifiedPlaintext = plaintext;
+    modifiedPlaintext.erase(remove_if(modifiedPlaintext.begin(), modifiedPlaintext.end(), isspace), modifiedPlaintext.end());
+    std::transform(modifiedPlaintext.begin(), modifiedPlaintext.end(), modifiedPlaintext.begin(), ::toupper);
+
+    // Pad the plaintext if its length is not divisible by m
+    int k = m - modifiedPlaintext.length() % m;
+    while (k > 0 && k < m) {
+        modifiedPlaintext += 'X';
+        k--;
+    }
+
+    int n = modifiedPlaintext.length() / m;
+
+    // Create a matrix from the modified plaintext
+    std::vector<std::vector<int>> plaintextMatrix(m, std::vector<int>(n));
+    int index = 0;
+    for (int j = 0; j < n; j++) {
+        for (int i = 0; i < m; i++) {
+            plaintextMatrix[i][j] = modifiedPlaintext[index] - 'A';
+            index++;
+        }
+    }
+
+    // Encrypt the plaintext
+    std::vector<std::vector<int>> ciphertextMatrix = multiplyMatrix(keyMatrix, plaintextMatrix);
+
+    // Convert the ciphertext matrix to a string
+    std::string ciphertext = "";
+    for (int j = 0; j < n; j++) {
+        for (int i = 0; i < m; i++) {
+            ciphertext += ciphertextMatrix[i][j] + 'A';
+        }
+    }
+
+    return ciphertext;
+}
+
+int main() {
+    std::string plaintext;
+    std::vector<std::vector<int>> keyMatrix;
+
+    std::cout << "Enter the plaintext: ";
+    std::getline(std::cin, plaintext);
+
+    int m;
+    std::cout << "Enter the size of the key matrix: ";
+    std::cin >> m;
+
+    std::cout << "Enter the key matrix elements: " << std::endl;
+    for (int i = 0; i < m; i++) {
+        std::vector<int> row;
+        for (int j = 0; j < m; j++) {
+            int element;
+            std::cin >> element;
+            row.push_back(element);
+        }
+        keyMatrix.push_back(row);
+    }
+
+    std::string ciphertext = hillCipherEncrypt(plaintext, keyMatrix);
+    std::cout << "Ciphertext: " << ciphertext << std::endl;
+
+    return 0;
+}

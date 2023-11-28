@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+
+
+std::string decryptVigenere(std::string ciphertext, std::string key) {
+std::string plaintext = "";
+int keyLength = key.length();
+int ciphertextLength = ciphertext.length();
+for (int i = 0, j = 0; i < ciphertextLength; i++) {
+char character = ciphertext[i];
+    // Kiểm tra xem ký tự có phải là chữ cái không
+    if (isalpha(character)) {
+        // Xác định vị trí của ký tự trong bảng chữ cái
+        char base = isupper(character) ? 'A' : 'a';
+        int position = character - base;
+
+        // Lấy ký tự tương ứng trong khóa
+        char keyChar = key[j % keyLength];
+        int keyPosition = keyChar - base;
+
+        // Áp dụng phép giải mã Vigenere
+        int decryptedPosition = (position - keyPosition + 26) % 26;
+
+        // Chuyển đổi vị trí đã giải mã thành ký tự
+        char decryptedChar = base + decryptedPosition;
+
+        // Thêm ký tự đã giải mã vào chuỗi plaintext
+        plaintext += decryptedChar;
+
+        // Tăng chỉ số j để lấy ký tự tiếp theo trong khóa
+        j++;
+    } else {
+        // Không giải mã những ký tự không phải là chữ cái
+        plaintext += character;
+    }
+}
+
+return plaintext;
+
+}
+
+
+int main() {
+std::string ciphertext;
+std::string key;
+// Nhập bản mã từ bàn phím
+std::cout << "Enter ciphertext: ";
+std::getline(std::cin, ciphertext);
+
+// Nhập khóa từ bàn phím
+std::cout << "Enter key: ";
+std::getline(std::cin, key);
+
+// Giải mã và in ra bản rõ
+std::string plaintext = decryptVigenere(ciphertext, key);
+std::cout << "Plaintext: " << plaintext << std::endl;
+
+return 0;
+
+}
