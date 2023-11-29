@@ -1,0 +1,30 @@
+Dưới đây là một số câu hỏi và đáp án để giúp bạn nắm rõ cách sử dụng và hoạt động của SET, IPsec và SSL:
+
+SET (Secure Electronic Transaction) là gì?
+
+SET là một giao thức thanh toán điện tử an toàn được phát triển bởi Visa và Mastercard. Nó cung cấp một khung pháp để thực hiện các giao dịch thanh toán trực tuyến một cách an toàn và bảo mật.
+
+IPsec (Internet Protocol Security) là gì?
+
+IPsec là một giao thức bảo mật sử dụng để bảo vệ dữ liệu khi truyền qua mạng Internet. Nó cung cấp các cơ chế mã hóa và xác thực để đảm bảo tính toàn vẹn, bảo mật và xác thực của các gói tin IP.
+
+SSL (Secure Sockets Layer) là gì?
+
+SSL là một giao thức bảo mật được sử dụng để bảo vệ thông tin trong quá trình truyền tải trên Internet. Nó sử dụng mã hóa và chứng thực để đảm bảo tính toàn vẹn và bảo mật của dữ liệu giữa máy khách và máy chủ.
+
+Cách sử dụng SET?
+
+Để sử dụng SET, các bên tham gia (người mua, người bán và ngân hàng) cần có chứng chỉ số và phần mềm hỗ trợ SET. Các giao dịch được thực hiện thông qua các thông điệp SET được mã hóa và xác thực để đảm bảo tính toàn vẹn và bảo mật.
+
+Cách hoạt động của IPsec?
+
+IPsec hoạt động bằng cách thêm các phần mở rộng bảo mật vào gói tin IP. Nó sử dụng các cơ chế mã hóa, xác thực và quản lý khóa để đảm bảo tính toàn vẹn, bảo mật và xác thực của dữ liệu trên mạng.
+
+Cách hoạt động của SSL?
+
+SSL hoạt động bằng cách thiết lập một kết nối an toàn giữa máy khách và máy chủ thông qua việc sử dụng chứng chỉ số và mã hóa. Nó sử dụng các cơ chế mã hóa và chứng thực để đảm bảo tính toàn vẹn, bảo mật và xác thực của dữ liệu trên mạng.
+
+Quan hệ giữa IPsec và SSL là gì?
+
+IPsec và SSL đều là giao thức bảo mật được sử dụng để bảo vệ dữ liệu trên mạng. Tuy nhiên, IPsec hoạt động ở tầng mạng (tầng 3) trong khi SSL hoạt động ở tầng ứng dụng (tầng 7). IPsec bảo vệ toàn bộ gói tin IP trong khi SSL chỉ bảo vệ dữ liệu trao đổi giữa máy khách và máy chủ.
+Tóm lại, SET, IPsec và SSL đều là các giao thức bảo mật được sử dụng trong các ứng dụng trực tuyến. SET dùng cho thanh toán điện tử, IPsec bảo vệ dữ liệu trên mạng và SSL bảo vệ thông tin trong quá trình truyền tải trên Internet.

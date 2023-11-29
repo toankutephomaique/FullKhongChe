@@ -1,0 +1,28 @@
+Dưới đây là một số câu hỏi nâng cao và áp dụng thực tế khi sử dụng tường lửa (firewall), cùng với câu trả lời ngắn gọn và dễ hiểu:
+
+
+Tại sao tường lửa là một thành phần quan trọng trong hệ thống bảo mật mạng?
+Tường lửa giúp ngăn chặn và kiểm soát lưu lượng mạng, ngăn chặn các cuộc tấn công và bảo vệ hệ thống mạng khỏi các mối đe dọa bên ngoài.
+
+
+Tường lửa có thể ngăn chặn những loại tấn công nào?
+Tường lửa có thể ngăn chặn tấn công từ chối dịch vụ (DoS), tấn công từ chối dịch vụ phân tán (DDoS), tấn công quét cổng, tấn công mã độc và nhiều loại tấn công khác.
+
+
+Các chính sách bảo mật trong tường lửa hoạt động như thế nào?
+Các chính sách bảo mật trong tường lửa xác định quyền truy cập và quyền từ chối cho các loại lưu lượng mạng dựa trên địa chỉ IP, cổng, giao thức và các thông tin khác.
+
+
+Tường lửa có thể kiểm soát lưu lượng mạng ở cấp độ ứng dụng không?
+Có, tường lửa cấp độ ứng dụng (Application Firewall) có khả năng kiểm soát lưu lượng mạng dựa trên nội dung của gói tin và có thể xử lý các giao thức cao cấp như HTTP, FTP, DNS, SMTP, v.v.
+
+
+Tường lửa có thể tích hợp với các hệ thống bảo mật khác không?
+Có, tường lửa có thể tích hợp với các hệ thống bảo mật khác như hệ thống phòng chống xâm nhập (IDS/IPS), hệ thống phòng chống mã độc, hệ thống phân tích lưu lượng mạng, v.v. để tăng cường khả năng bảo vệ mạng và hệ thống.
+
+
+Tường lửa có thể được triển khai ở các vị trí nào trong mạng?
+Tường lửa có thể được triển khai ở các vị trí khác nhau trong mạng, bao gồm tường lửa mạng (network firewall) ở biên mạng, tường lửa mạng nội bộ (internal network firewall) để chia mạng nội bộ thành các khu vực an toàn, và tường lửa host (host firewall) trên từng máy tính hoặc máy chủ.
+
+
+Đó là những câu hỏi nâng cao và áp dụng khi sử dụng tường lửa và câu trả lời ngắn gọn và dễ hiểu nhất.

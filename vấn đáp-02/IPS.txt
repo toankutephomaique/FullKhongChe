@@ -1,0 +1,101 @@
+1. IPS là hệ thống gì?
+IPS là viết tắt của Intrusion Prevention System - Hệ thống giúp phát hiện và ngăn chặn các hoạt động độc hại diễn ra trên hệ thống mạng. IPS được xem là phiên bản mở rộng, nâng cao của hệ thống phát hiện xâm nhập (IDS) và hoạt động thông qua việc giám sát lưu lượng mạng và hệ thống. 
+
+Hiện nay các hệ thống IPS được đặt trực tiếp trên đường mạng (inline), qua đó IPS sở hữu khả năng ngăn chặn các cuộc tấn công độc hại diễn ra trong thời gian thực.
+
+2. Vai trò chính của IPS là gì?
+IPS là một phần tử quan trọng đối với bất kỳ hệ thống bảo mật doanh nghiệp hiện nay. Việc sử dụng đa nền tảng đám mây trong doanh nghiệp hiện nay yêu cầu xử lý lưu lượng truy cập cực kỳ lớn. 
+
+Vì vậy việc giám sát hay xử lý thủ công gần như là bất khả thi. Ngoài ra, các mối đe dọa mà hệ thống bảo mật doanh nghiệp hiện nay phải đối mặt ngày càng nhiều và phức tạp hơn. Đó là lý do mà hệ thống IPS ra đời, đóng vai trò quan trọng trong việc phản ứng nhanh chóng, tự động đối với các mối đe dọa, cuộc tấn công trong hệ thống mạng.
+
+Nếu phát hiện bất kỳ hành động độc hại hoặc lưu lượng truy cập đáng ngờ nào, hệ thống IPS sẽ tự động thực hiện một trong các hành động sau:
+
+Chấm dứt phiên TCP đã bị khai thác và chặn hoàn toàn truy cập đối với địa chỉ IP nguồn vi phạm, tài khoản người dùng, máy chủ đích.
+Thiết lập lại chương trình hoặc cấu hình lại tường lửa để ngăn chặn các cuộc tấn công tương tự có thể xảy ra trong tương lai.
+Xóa hoặc thay thế các nội dung độc hại còn sót lại trên mạng sau các cuộc tấn công. Quy trình thực hiện bao gồm xóa thông tin tiêu đề và xóa mọi tệp đính kèm bị nhiễm khỏi tệp hoặc máy chủ email.
+
+3. Các loại IPS thông dụng hiện nay
+Có một số loại hệ thống phòng chống xâm nhập (IPS) với các mục đích khác nhau: 
+
+Hệ thống ngăn chặn xâm nhập mạng (NIPS) được cài đặt tại các điểm chiến lược để giám sát và phát hiện các mối đe dọa trong toàn bộ lưu lượng mạng. 
+Hệ thống ngăn chặn xâm nhập máy chủ (HIPS) đã được cài đặt trên một điểm cuối hệ thống để xem xét lưu lượng truy cập vào và ra từ 1 máy chủ đó. Được xem là tuyến phòng thủ cuối cùng khi cuộc tấn công đã lọt qua hệ thống NIPS. 
+Hệ thống phân tích hành vi mạng (NBA) phân tích lưu lượng mạng để phát hiện các truy cập bất thường, xác định các mối đe dọa như tấn công từ chối dịch vụ phân tán, các dạng phần mềm độc hại bằng virus hay mã độc và vi phạm chính sách.
+Hệ thống ngăn chặn xâm nhập không dây (WIPS): Hệ thống này đơn giản sẽ quét mạng Wifi để lọc ra truy cập trái phép và loại bỏ các thiết bị trái phép khỏi mạng.
+
+4. Lợi ích đáng kể của hệ thống IPS là gì?
+Hệ thống ngăn chặn xâm nhập IPS mang đến nhiều lợi ích lớn trong vấn đề an toàn mạng, bảo mật dữ liệu:
+
+Hỗ trợ song song: Hệ thống IPS hoạt động song song với các giải pháp bảo mật khác. Kết hợp và hỗ trợ xác định các mối đe dọa, cuộc tấn công mà các giải pháp khác không thể phát hiện ra. Cung cấp khả năng bảo mật ứng dụng vượt trội nhờ mức độ nhận biết ứng dụng cao.
+Tối ưu hiệu quả cho các biện pháp kiểm soát bảo mật khác: Trong quá trình hoạt động, hệ thống IPS sẽ lọc lưu lượng độc hại trước khi truyền dữ liệu đến các thiết bị và biện pháp kiểm soát bảo mật khác. Vì vậy IPS sẽ giảm thiểu tối đa khối lượng công việc mà các biện pháp kiểm soát phải đảm nhiệm, tối ưu thời gian, tài nguyên và hiệu quả xử lý. 
+Tiết kiệm thời gian: Hệ thống IPS vận hành hoàn toàn tự động vì vậy giúp tối ưu nhân lực CNTT, giải tải khối lượng công việc thủ công thông thường.
+Khả năng tùy chỉnh: Hệ thống IPS có thể thiết lập với các chính sách bảo mật, được tùy chỉnh phù hợp dành riêng cho từng doanh nghiệp sử dụng nó.
+Bảo vệ chống lại các mối đe dọa đã biết và chưa biết: IPS có thể chặn các mối đe dọa đã biết, đồng thời phát hiện và chặn các mối đe dọa chưa biết chưa từng thấy trước đây.
+Bảo vệ thời gian thực: IPS có thể phát hiện và ngăn chặn lưu lượng độc hại trong thời gian thực, ngăn chặn các cuộc tấn công và giảm thiểu bất kỳ thiệt hại nào.
+Tăng cường khả năng hiển thị mạng: IPS cung cấp khả năng hiển thị mạng, cho phép bạn theo dõi những gì đang xảy ra trong mạng của mình và xác định các rủi ro bảo mật tiềm ẩn.
+
+5. Hệ thống IPS hoạt động ra sao?
+5.1 Hệ thống phát hiện và ngăn chặn dựa trên dấu hiệu
+Thiết kế để phát hiện các cuộc tấn công, mối nguy hiểm tiềm năng bằng cách phân tích, đối chiếu dữ liệu nhật ký lưu lượng mạng với các mẫu tấn công hiện có. Hệ thống sẽ thực hiện hành động cần thiết nếu phát hiện ra bất kỳ hành động xâm nhập nào khớp với các dấu hiệu đã được lưu trong cơ sở dữ liệu.
+
+5.2 Hệ thống phát hiện và ngăn chặn dựa trên sự bất thường
+Được thiết kế để xác định chính xác các cuộc tấn công không xác định, các phần mềm độc hại mới. Lợi ích chính của tính năng nhận biết bất thường là những báo động tạo ra không dựa trên những tín hiệu của những dạng tấn công cụ thể mà dựa trên những hành động bất thường của nó. 
+
+Vì vậy mà hệ thống có thể phát hiện dễ dàng được sự tấn công trước cả khi nó xảy ra.
+
+gif-mui-tenTìm hiểu thêm: Băng thông là gì?
+
+5.3 Hệ thống phát hiện và ngăn chặn IPS dựa trên tiêu chuẩn bảo mật của doanh nghiệp
+Hệ thống này yêu cầu quản trị viên thiết lập các chính sách bảo mật phù hợp với chính sách bảo mật của tổ chức và mạng hạ tầng thực tế. Khi có hoạt động vi phạm chính sách bảo mật, hệ thống sẽ kích hoạt cảnh báo và thông báo cho quản trị viên hệ thống.
+
+6.Phân biệt giữa IPS và IDS
+Sự khác biệt chính giữa IPS và IDS là hành động được thực hiện khi một mối đe dọa được phát hiện:
+
+IPS và IDS khác nhau chủ yếu ở thẩm quyền xử lý mối đe dọa: 
+
+IPS sẽ kiểm soát truy cập vào mạng và bảo vệ mạng khỏi bị tấn công một cách chủ động. Ngay khi phát hiện hành động xâm nhập nguy hiểm, IPS có khả năng thực hiện hành động xử lý ngay lập tức, dựa trên một bộ quy tắc do quản trị viên mạng thiết lập.
+Hệ thống IDS chỉ được xây dựng để giám sát và báo cáo cho quản trị viên nếu phát hiện hoạt động xâm nhập bất thường
+
+7. Các dạng tấn công tiềm năng IPS có thể phát hiện và ngăn chặn
+7.1 Tấn công giả mạo giao thức phân giải địa chỉ (ARP)
+kẻ tấn công gửi tin nhắn ARP giả để tạo ra một liên kết giữa địa chỉ MAC của kẻ tấn công và địa chỉ IP của hệ thống bị tấn công, từ đó chuyển hướng lưu lượng truy cập từ hệ thống hợp pháp sang kẻ tấn công.
+
+gif-mui-tenTìm hiểu chi tiết về ARP qua bài viết: ARP là gì? Tầm quan trọng của giao thức ARP trong mạng máy tính
+
+7.2 Tấn công từ chối dịch vụ
+Tấn công từ chối dịch vụ DoS (Denial of Service) là hình thức tấn công nhằm vào các thiết bị mạng như router, web server, DNS server… nhằm làm cho chúng không thể hoạt động bình thường trong một thời gian nhất định hoặc vô thời hạn. 
+
+Cách thức tấn công phổ biến là tấn công bằng gửi số lượng lớn các yêu cầu kết nối đến các thiết bị mục tiêu, dẫn đến tình trạng quá tải hay phản hồi chậm chạp. Hậu quả của việc tấn công DoS có thể gây ra sự tắc nghẽn đường truyền từ người dùng đến mạng bị tấn công,gây ra sự cố crash hoặc reboot.
+
+ Có tới 5 loại tấn công DoS phổ biến: tiêu thụ nguồn tài nguyên như băng thông, bộ nhớ hoặc thời gian xử lý, phá hủy các thông tin cấu hình hoặc trạng thái, hoặc gây tắc nghẽn đường truyền.gây ra sự cố crash hoặc reboot
+
+7.3 Tấn công từ chối dịch vụ phân tán (Distributed DoS)
+Tấn công từ chối dịch vụ phân tán xảy ra khi có quá nhiều máy trạm cùng tham gia vào quá trình làm quá tải băng thông hoặc tài nguyên của mạng bị tấn công. 
+
+Để thực hiện được tấn công DDoS, kẻ tấn công sẽ xâm nhập vào các hệ thống máy tính, cài đặt các chương trình điều khiển từ xa. Sau đó kích hoạt đồng thời các chương trình này trong cùng một thời điểm để tấn công đồng loạt vào một mục tiêu. 
+
+Hậu quả của tấn công từ chối dịch vụ phân tán có thể ngốn hết băng thông của mạng mục tiêu trong nháy mắt nếu huy động tới hàng trăm thậm chí hàng ngàn máy tính cùng tham gia tấn công một lúc.
+
+7.4 Phân mảnh IP
+Dạng tấn công này sử dụng kỹ thuật phân mảnh IP để gây nhầm lẫn cho hệ thống bị tấn công khi tập hợp các gói dữ liệu TCP/UDP.
+
+7.5 Tấn công qua SMB
+SMB là viết tắt của Server Message Block, là một giao thức được sử dụng trong hệ điều hành Windows và DOS. Giao thức này cho phép các máy khách truy cập vào hệ thống file và các thiết bị input/output của máy chủ.
+
+Kẻ tấn công có thể sử dụng mã độc để khai thác vào lỗ hổng của giao thức này, qua đó tự động mã hoá hàng loạt các tập tin dữ liệu theo mục đích phá hoại.
+
+7.6 Tấn công vượt qua lớp mã hóa SSL
+Kẻ tấn công sẽ khai thác lớp mã hóa SSL và bảo mật lớp vận chuyển (TLS) để ẩn nội dung độc hại, tránh sự phát hiện của các hệ thống giám sát và vượt qua bảo mật mạng.
+
+8. Lý do doanh nghiệp cần triển khai IPS
+IPS là một trong những thành phần quan trọng trong các giải pháp bảo vệ hệ thống, hỗ trợ bảo mật dữ liệu. Tại sao mọi doanh nghiệp cần triển khai IPS? Đơn giản bởi:
+
+IPS mang đến khả năng giám sát, theo dõi các hoạt động bất thường trong lưu lượng truy cập hệ thống.
+Xác định đối tượng đang xâm nhập vào hệ thống với cách thức ra sao. Phát hiện vị trí trong cấu trúc mạng đang bị xâm nhập, khai thác.
+Cài đặt, thiết lập với hệ thống tường lửa để ngăn chặn kịp thời các hoạt động thâm nhập, phá hoại hệ thống hay ăn cắp dữ liệu.
+
+9. Cách thức triển khai hệ thống IPS trong doanh nghiệp
+Hiện nay hệ thống IPS có thể được triển khai tại các vị trí chiến lược như:
+
+IPS được đặt trước firewall có thể bảo vệ được toàn bộ hệ thống bên trong kể cả firewall, vùng DMZ. Từ đó, có thể giảm thiểu các nguy cơ tấn công từ chối dịch vụ đối với firewall.
+Khi triển khai IPS sau thiết bị firewall có thể phòng tránh được một số kiểu tấn công thông qua khai thác lỗ hổng.
+Trong trường hợp IPS được đặt trong miền DMZ, nhân viên quản trị có thể theo dõi tất cả lưu lượng truy cập vào hoặc ra trong miền DMZ.

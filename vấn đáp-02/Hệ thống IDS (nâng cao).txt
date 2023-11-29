@@ -1,0 +1,24 @@
+Dưới đây là một số câu hỏi nâng cao và áp dụng thực tế khi sử dụng phát hiện xâm nhập IDS (Intrusion Detection System), cùng với câu trả lời ngắn gọn và dễ hiểu:
+
+
+Làm thế nào IDS giúp bảo vệ mạng và hệ thống máy tính?
+IDS giúp bảo vệ mạng và hệ thống máy tính bằng cách phát hiện và cảnh báo về các hoạt động xâm nhập hoặc đe dọa đến hệ thống. Điều này cho phép người quản trị mạng nhận biết và đáp ứng kịp thời để ngăn chặn cuộc tấn công và bảo vệ dữ liệu quan trọng.
+
+
+Phát hiện xâm nhập IDS có thể phát hiện những loại tấn công nào?
+IDS có thể phát hiện các loại tấn công như tấn công từ chối dịch vụ (DoS), tấn công từ chối dịch vụ phân tán (DDoS), tấn công mã độc, tấn công quét cổng, tấn công từ điển, và nhiều hình thức tấn công khác.
+
+
+IDS có thể hoạt động ở chế độ nào?
+IDS có thể hoạt động ở hai chế độ: chế độ mạng và chế độ máy tính. Chế độ mạng giám sát lưu lượng mạng trên một segment mạng, trong khi chế độ máy tính giám sát các hoạt động trên một máy tính cụ thể.
+
+
+IDS có thể tích hợp với các hệ thống bảo mật khác không?
+Có, IDS có thể tích hợp với các hệ thống bảo mật khác như hệ thống phòng chống tấn công từ chối dịch vụ (DDoS), tường lửa (firewall), và hệ thống phòng chống xâm nhập (IPS) để tăng cường khả năng bảo vệ mạng và hệ thống.
+
+
+IDS có thể phát hiện các mẫu tấn công mới không?
+IDS có thể phát hiện các mẫu tấn công mới dựa trên các quy tắc và chữ ký đã biết. Tuy nhiên, để phát hiện các mẫu tấn công mới, cần liên tục cập nhật cơ sở dữ liệu với thông tin mới nhất về các mẫu tấn công và kỹ thuật xâm nhập mới.
+
+
+Đó là những câu hỏi nâng cao và áp dụng thực tế khi sử dụng phát hiện xâm nhập IDS và câu trả lời ngắn gọn và dễ hiểu nhất.

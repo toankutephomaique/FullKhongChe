@@ -1,0 +1,35 @@
+Dưới đây là một số câu hỏi nâng cao và áp dụng thực tế về SET, IPsec và SSL, cùng với câu trả lời ngắn gọn và dễ hiểu:
+
+
+SET (Secure Electronic Transaction):
+
+SET áp dụng trong hệ thống thanh toán trực tuyến để đảm bảo an toàn và bảo mật.
+Quy trình giao dịch SET bao gồm xác thực người dùng, mã hóa thông tin và xác thực thanh toán.
+Lợi ích của SET là bảo vệ thông tin cá nhân và thanh toán trực tuyến, nhưng hạn chế là yêu cầu sự hợp tác giữa các bên tham gia.
+
+
+
+IPsec (Internet Protocol Security):
+
+IPsec được sử dụng trong mạng để bảo vệ dữ liệu truyền qua Internet.
+IPsec sử dụng mã hóa và xác thực để đảm bảo tính toàn vẹn, bảo mật và xác thực dữ liệu.
+IPsec được áp dụng ở tầng mạng (tầng 3) và bảo vệ toàn bộ gói tin IP.
+
+
+
+SSL (Secure Sockets Layer):
+
+SSL được sử dụng trong các ứng dụng trên Internet để bảo vệ thông tin truyền tải.
+SSL thiết lập kết nối an toàn giữa máy khách và máy chủ thông qua mã hóa và chứng thực.
+SSL bảo vệ tính toàn vẹn, bảo mật và xác thực dữ liệu ở tầng ứng dụng (tầng 7).
+
+
+
+Áp dụng thực tế:
+
+SET, IPsec và SSL được sử dụng trong các hệ thống thanh toán trực tuyến, bảo vệ dữ liệu trên mạng và đảm bảo tính toàn vẹn và bảo mật thông tin.
+Các công ty và tổ chức sử dụng SET, IPsec và SSL để đảm bảo bảo mật thông tin và giao tiếp an toàn trên Internet.
+Áp dụng SET, IPsec và SSL giúp giải quyết các vấn đề bảo mật trong thực tế như bảo vệ thông tin cá nhân, đảm bảo tính toàn vẹn của dữ liệu và ngăn chặn các cuộc tấn công mạng.
+
+
+

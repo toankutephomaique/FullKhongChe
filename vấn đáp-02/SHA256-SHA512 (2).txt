@@ -1,0 +1,99 @@
+​​Nội dung 
+
+Câu 1. Có thể phá vỡ mã hàm băm SHA-512 không? – Khải  
+
+ 
+
+Câu 2. Trong môi trường blockchain tại sao SHA-256 được chọn định danh cho các khối và giao dịch? - Thạch 
+
+Độ dài băm 256-bit: Độ dài đầu ra của SHA-256 là 256 bit, tạo ra một mã băm đủ dài để đảm bảo tính an toàn và không thể dự đoán. Một mã băm dài hơn sẽ làm cho việc tìm kiếm các giá trị băm hợp lệ trở nên khó khăn hơn đối với các kẻ tấn công.  
+
+ 
+
+Khả năng đụng độ thấp: SHA-256 đã được thiết kế để đạt được tính chống đụng độ cao, điều này có nghĩa rằng hai dữ liệu đầu vào khác nhau sẽ tạo ra mã băm khác nhau với xác suất rất cao. Điều này quan trọng trong việc đảm bảo rằng mỗi khối và giao dịch trong blockchain có một mã băm duy nhất để xác định chúng.  
+
+ 
+
+Độ tin cậy: SHA-256 đã được sử dụng và kiểm chứng trong nhiều ứng dụng bảo mật khác nhau, bao gồm cả mô hình tài chính. Sự phổ biến và độ tin cậy của nó đã làm cho nó trở thành lựa chọn phù hợp cho các hệ thống blockchain.  
+
+ 
+
+Ví dụ: với việc SHA-1 bị giảm giá trị do lỗ hổng bảo mật, SHA-256 được chọn làm chứng chỉ SSL/TLS mặc định. Vì SHA-512 không được triển khai rộng rãi nên tồn tại một số vấn đề về tính tương thích khiến nó trở thành một giải pháp ít thực tế hơn.  
+
+ 
+
+Vì SHA-256 được triển khai trên giao thức Bitcoin nên các mạng blockchain khác (ví dụ Bitcoin Cash và Bitcoin SV) đã được tạo ra nhờ các hard fork của Bitcoin cũng tiếp tục sử dụng SHA-256. Đổi lại, điều này có nghĩa là các giàn khai thác phần cứng ASIC mạnh mẽ đã được sản xuất dành riêng cho thuật toán SHA-256.  
+
+ 
+
+Đối với các mạng blockchain ít được thiết lập hơn, việc thu phục các thợ đào cũng dễ dàng hơn nhiều bằng cách sử dụng thuật toán băm tương thích với phần cứng hiện có của họ.  
+
+ 
+
+ 
+
+Câu 3. SHA-256 và SHA-512 là gì ? Và chúng sử dụng trong mục đích gì ? – Nga 
+
+ 
+
+Câu 4. Tại sao SHA-256 và SHA-512 thường được sử dụng để quản lý mật khẩu của người dùng trong ứng dụng trực tuyến? – Linh 
+
+ 
+
+Câu 5. Khi nào sử dụng SHA-256 và SHA-512? – Khải 
+
+ 
+
+Câu 6. SHA-256 và SHA-512 được sử dụng ở đâu? – Hoàng 
+
+ 
+
+Câu 7. Làm thế nào SHA-512 giúp tăng cường tính riêng trong lưu trữ dữ liệu cá nhân và hồ sơ y tế? – Nga 
+
+ 
+
+ 
+
+Câu 8. Hãy kể một số ví dụ về SHA-256 và SHA-512? – Thạch 
+
+Kiểm tra tính xác thực: SHA-256 và SHA-512 có thể được sử dụng để kiểm tra tính xác thực của tệp tin. Người nhận tệp tin có thể tính toán mã băm của tệp tin và so sánh nó với mã băm ban đầu để xác minh tính toàn vẹn của tệp tin. 
+
+Sổ cái: Trong kế toán và tài chính, SHA-256 và SHA-512 có thể được sử dụng để tạo mã băm của các giao dịch và sổ cái tài chính để đảm bảo tính toàn vẹn và xác minh. 
+
+Chữ ký số: Mã băm SHA-256 và SHA-512 có thể được sử dụng để tạo chữ ký số cho tài liệu kỹ thuật số. Chữ ký số giúp xác minh tính toàn vẹn của tài liệu và nguồn gốc của nó. 
+
+Tạo định danh duy nhất: Mã băm SHA-256 và SHA-512 cũng có thể được sử dụng để tạo định danh duy nhất cho các tài sản kỹ thuật số, ví dụ như token trong các mạng lưới blockchain. 
+
+Câu 9. Trong quá trình truyền data qua mạng, làm thế nào để bảo toàn tính toàn vẹn của dữ liệu ? – Linh 
+
+ 
+
+ 
+
+Câu 10. Hãy nêu các bước cải tiến SHA-256 và SHA-512 ? – Nga 
+
+ 
+
+Câu 11. Tại sao SHA-256 và SHA-512 thường được sử dụng để băm mật khẩu người dùng? – Khải 
+
+ 
+
+Câu 12. Nêu các ứng dụng bảo mật cần kết hợp SHA-512 để tăng cường lưu dữ bảo mật? – Hoàng 
+
+ 
+
+Câu 13. vai trò của SHA trong môi trường chuyển đổi số hiện nay 
+
+ 
+
+Câu 14. SHA- 256 và SHA-512 cái nào an toàn hơn? 
+
+ 
+
+Câu 15. Trong trường hợp truyền dữ liệu qua mạng bên phát và bên nhận làm thế nào để đảm bảo tính toàn vẹn dữ liệu 
+
+ 
+
+Câu 16. Làm thế nào SHA-512 giúp tăng cường tính riêng trong lưu trữ dữ liệu cá nhân và hồ sơ y tế? 
+
+ 

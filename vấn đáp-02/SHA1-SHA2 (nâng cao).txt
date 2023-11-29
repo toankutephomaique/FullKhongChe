@@ -1,0 +1,24 @@
+Dưới đây là một số câu hỏi nâng cao và áp dụng vào thực tế về việc sử dụng SHA1 và SHA2, cùng với câu trả lời ngắn gọn và dễ hiểu nhất:
+
+
+Tại sao chúng ta cần sử dụng SHA1 và SHA2 trong thực tế?
+SHA1 và SHA2 là các thuật toán băm được sử dụng để tính toán giá trị băm của dữ liệu. Chúng giúp kiểm tra tính toàn vẹn, xác minh danh tính và đảm bảo an toàn thông tin trong các ứng dụng bảo mật và giao tiếp mạng.
+
+
+Trong lĩnh vực nào mà SHA1 và SHA2 được sử dụng phổ biến nhất?
+SHA1 và SHA2 được sử dụng rộng rãi trong các lĩnh vực như chứng thực SSL/TLS, chứng chỉ số, xác thực mật khẩu, xác minh tệp tin và bảo mật dữ liệu trong hệ thống mạng và ứng dụng.
+
+
+SHA1 và SHA2 có khác biệt gì về độ bảo mật?
+SHA1 đã bị coi là không an toàn do lỗ hổng bảo mật. Trái ngược, SHA2 được coi là an toàn hơn do độ dài giá trị băm lớn hơn và cấu trúc toán học phức tạp hơn, kháng lại các cuộc tấn công xung đột.
+
+
+Khi nào chúng ta nên sử dụng SHA1 và SHA2?
+SHA1 không nên được sử dụng trong các ứng dụng mới do tính không an toàn. Thay vào đó, SHA2 được khuyến nghị sử dụng trong các ứng dụng bảo mật cao hơn và đảm bảo tính toàn vẹn dữ liệu.
+
+
+Có những thuật toán băm khác ngoài SHA1 và SHA2 không?
+Ngoài SHA1 và SHA2, còn có nhiều thuật toán băm khác như MD5, SHA3, và Blake2. Tuy nhiên, lựa chọn thuật toán phụ thuộc vào yêu cầu bảo mật và hiệu suất của ứng dụng cụ thể.
+
+
+Đó là những câu hỏi nâng cao và áp dụng vào thực tế về việc sử dụng SHA1 và SHA2 và câu trả lời ngắn gọn và dễ hiểu nhất.
