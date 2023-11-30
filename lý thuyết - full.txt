@@ -1,0 +1,86 @@
+Chương 1. Tổng quan về an toàn thông tin
+Một số khái niệm cơ bản
+Mật mã học (Cryptography) là ngành khoa học nghiên cứu về việc đảm bảo an toàn thông tin. Mật mã học gắn liền với quá trình mã hóa nghĩa là chuyển đổi thông tin từ dạng "có thể hiểu được" thành dạng "không thể hiểu được" và ngược lại là quá trình giải mã. Cryptography giúp đảm bảo những tính chất sau cho thông tin:
+•	Tính bí mật (confidentiality): thông tin chỉ được tiết lộ cho những ai được phép
+•	Tính toàn vẹn (integrity): thông tin không thể bị thay đổi mà không bị phát hiện.
+•	Tính xác thực (authentication): người gửi (hoặc người nhận) có thể chứng minh đúng họ.
+•	Tính chống chối bỏ (non-repudiation): người gửi hoặc nhận sau này không thể chối bỏ việc đã gửi hoặc nhận thông tin.
+Thám mã (cryptanalysis): nghiên cứu cách phá các hệ mật nhằm phục hồi bản rõ ban đầu từ bản mã, nghiên cứu các nguyên lí và phương pháp giải mã mà không biết khóa. Có 3 phương pháp tấn công cơ bản của thám mã:
+•	Tìm khóa vét cạn
+•	Phân tích thống kê
+•	Phân tích toán
+Bản rõ (Plaintext): Dạng ban đầu của thông báo 
+Bản mã (Ciphertext): Dạng mã của bản rõ ban đầu 
+Khóa (Key): thông tin tham số dùng để mã hóa 
+Mã hóa (Encryption): Quá trình biến đổi thông tin từ dạng bản rõ sang bản mã bằng khóa hoặc không cần khóa 
+Giải mã (Decryption): Quá trình ngược lại biến đổi thông tin từ dạng bản mã sang bản rõ.
+Mã hoá là gì? Ứng dụng của mã hoá
+Mã hoá là phương pháp để biến thông tin (hình ảnh, văn bản) từ định dạng bình thường sang dạng thông tin mà chúng ta không thể hiểu được nếu không có phương tiện giải mã. Đồng thời, mã hoá có vai trò quan trọng trong giao dịch điện tử để đảm bảo độ bảo mật, toàn vẹn của thông tin khi truyền trên mạng. Thông thường, mã hóa được áp dụng nhiều trong các ví điện tử quen thuộc với chúng ta như Momo, Zalopay, Shopee Pay….Trái lại, giải mã là quá trình ngược của mã hoá, biến thông tin từ dạng được mã hoá về dạng thông tin ban đầu. 
+ Trong toán học, "ánh xạ" có nghĩa là một quy tắc cho một phần tử x trong tập hợp A tương ứng với một phần tử y trong tập hợp B, nói cách khác là một phép "mã hóa" x thành y. Vận dụng định nghĩa đó, ánh xạ trong lập trình là một cấu trúc dữ liệu cho phép tạo ra các phần tử ở dạng một cặp khóa - giá trị (key - value), mà giá trị chính là một ánh xạ của khóa do người dùng quy định, từ đó dễ dàng hơn trong việc kiểm soát dữ liệu.
+Chương 2. Mã hoá dữ liệu	
+Phân loại thuật toán mã hóa
+Có nhiều cách phân loại thuật toán mã hóa nhưng cách phân loại theo khóa được sử dụng phổ biến hơn.
+
+1. Mã hoá cổ điển
+1.1 Mã Caesar (Shift Cipher) Mã dịch chuyển
+Mật mã Caesar là một dạng mật mã thay thế, trong đó mỗi ký tự ở văn bản ban đầu sẽ được thay thế bằng một ký tự khác, có vị trí cách nó một khoảng xác định trong bảng chữ cái. Cũng giống như các loại mật mã thay thế khác, mật mã Caesar rất dễ bị phá giải. 
+Trong Mã Caesar, để mã hóa ta dịch chuyển từng kí tự của bản rõ lên k bước. Nó được xem là một dạng mã cộng. 
+
+Thám mã
+Thám mã đối với mã Caesar khá đơn giả, khóa k cần giữ bí mật chỉ có 26 khả năng xảy ra nên ta dễ dàng dùng thuật toán Brute-force để tìm ra bản rõ ban đầu.
+
+1.2 Mã Affine
+So với mã Caesar, mã Affine phức tạp hơn một chút. Mã Affine là sự kết hợp của mã nhân và mã Caesar. 
+Hàm lập mã và hàm giải mã của mã Affine được định nghĩa:
+Mã hoá:
+Ek (x) = ax+b mod 26
+Giải mã:
+Dk (y) = a-1 (y – b) mod 26
+Trong đó khóa k là một bộ gồm 2 thành phần k = (a, b) và kí hiệu a-1 chỉ module nghịch đảo của a.
+Điều kiện:
+a và b là hai số nguyên tố cùng nhau gcd (a,b) = 1
+Module nghịch đảo của một số
+Module nghịch đảo của một số a kí hiệu a-1 theo mod m là một số i sao cho:
+(a * i) = 1 (mod m)
+tức là (a * i) chia cho m sẽ dư 1.
+Để tìm i đơn giản nhất là dùng thuật toán Brute-force với i tăng dần 1, 2, … đến khi nào thỏa mãn hệ thức trên thì thôi. Nhưng với a lớn thì thuật toán Brute-force sẽ rất mất thời gian. Có một cách hiệu quả hơn đó là dùng Giải thuật Euclide mở rộng để tính a-1. 
+Thuật toán Euclid dùng để tìm ước số chung lớn nhất của hai số nguyên a và b. Ta ký hiệu ước số chung lớn nhất này là gcd(a, b). Thuật toán này dựa trên định lý sau:
+Định lý: với mọi số nguyên a ≥ 0 và b > 0 thì:
+gcd(a, b) = gcd(b, a mod b)
+Thám mã
+Mã Affine là một hệ mã yếu. Có 12 số a ∈ Z26 thỏa mãn gcd(a, 26) = 1. Như vậy tập khóa K chỉ có 12 x 26  = 312 phần tử. Ta dễ dàng dùng thuật toán Brute-force để thám mã.
+
+1.3 Mã Vigenere
+mã hóa Caesar, mã hóa Affine, được gọi chung là mã thay thế dùng một bảng chữ cái (monoalphabetic substitution cipher).
+Mật mã Vigenère là một phương pháp mã hóa văn bản bằng cách sử dụng xen kẽ một số phép mã hóa Caesar khác nhau dựa trên các chữ cái của một từ khóa. Nó là một dạng đơn giản của mật mã thay thế dùng nhiều bảng chữ cái.
+Thám mã Vigenere
+Để thám mã Vigenere, trước hết cần xác định độ dài từ khóa, ký hiệu là m. Sau đó mới xác định từ khóa. Có hai kỹ thuật để xác định độ dài từ khóa đó là phương pháp Kasiski và phương pháp chỉ số trùng hợp (index of coincidence).
+
+1.4 Mã Hill 	
+Hill Cipher là một thuật toán mật mã để mã hoá và giải mã một văn bản chữ cái. Trong mật mã này, mỗi chữ cái được biểu thị bằng một số (ví dụ: A = 0, B = 1, C = 2, D = 3, …, Z = 25). 
+Dựa trên đại số tuyến tính, mật mã Hill là một mật mã thay thế đa đồ họa trong mật mã.
+Mã Hill là bộ (P, C, K, E, D), thỏa mãn: • P = C = (Z26) m, với m là một số nguyên dương.
+P : Plaintext (bản rõ)
+C : Ciphertext (bản mã)
+K : ma trận dùng làm khoá
+E : Encypt (mã hoá)
+D : Decrypt (Giải mã)
+Mã hoá và giải mã
+Để mã hóa tin nhắn: Chuỗi khóa và chuỗi tin nhắn được biểu diễn dưới dạng ma trận. Sau đó, chúng được nhân lên theo modulo 26. Ma trận khóa phải có nghịch đảo để giải mã tin nhắn.
+C = E (K,P) = P * K (nhân vector với vector) mod 26
+Để giải mã tin nhắn: Tin nhắn được mã hóa được nhân với ma trận khóa nghịch đảo dùng để mã hóa theo modulo 26 để nhận được tin nhắn giải mã.
+P = (K,C) = C* K -1 mod 26
+K -1 : ma trận nghịch đảo của ma trận K
+
+2.Thuật toán mã hóa khóa đối xứng
+Mã hóa đối xứng còn có một số tên gọi khác như Secret Key Cryptography (hay Private Key Cryptography), sử dụng cùng một khóa cho cả hai quá trình mã hóa và giải mã.
+-	Mã hoá DES
+DES viết tắt của Data Encryption Standard. Với DES, Plaintext được mã hóa theo từng khối 64 bits và sử dụng một khóa là 64 bits, nhưng thực tế thì chỉ có 56 bits là thực sự được sử dụng để tạo khóa. Là một thuật toán được sử dụng rộng rãi nhất trên thế giới với bề dày lịch sử hơn 20 năm, được phát triển bởi IBM Team vào những năm 1970, sau đó được phát triển bởi NIST (National Institute of Standard and Technology) cho các ứng dụng thương mại. Hiện tại DES không còn được đánh giá cao do kích thước của khóa là quá nhỏ 56 bit và nó dễ dàng bị phá vỡ chỉ trong vòng 24 tiếng đồng hồ.
+3.Thuật toán mã hóa bất đối xứng
+-	RSA
+-	Trao đổi khoá Diffie Hellman
+
+
+
+
+
